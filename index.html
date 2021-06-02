@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="https://github.com/gmostofabd/melab-store/blob/main/Images/melab-bd_logo.jpg?raw=true" type="image/x-icon">
+  
+    <script src="https://github.com/gmostofabd/melab-store/blob/main/sharedfooter.js" type="text/javascript" defer></script>
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    
+    <script>
+          $(function(){
+              $('#sidebar1').load("assets/sidebar1.html");
+          });
+    </script>
+    
+    <meta charset="utf-8">
+    <meta name="Keywords" content="Microcontroller,8051,Assembly,Programming,Circuits,Codes,Proteus">
+    
+    <!--Facebook Open graph Mete Tags-->
+    <meta property="og:url"                content="https://gmostofabd.github.io/8051-LCD/" />
+    <meta property="og:type"               content="article" />
+    <meta property="og:title"              content="Exp-05 : 8051 with LCD Display" />
+    <meta property="og:description"        content="LCD Interfacing with 8051 Microcontrollers" />
+    <meta property="og:image"              content="assets/images/LCD_8B_8051_Ckt.png" />
+  
+    <title>8051 Stepper Motor</title>
+</head>
+
+<body>
+  <div id="header_common"><img src="https://github.com/gmostofabd/melab-store/blob/main/Images/8051_Tutorial_Banner.png?raw=true" alt="common_banner"></div>
+  <div id="topic_container"><h2>Exp. 09 : Stepper Motor Interfacing with 8051 Microcontroller</h2></div>
+  
+  <table align = center width=1000 height=1000  bgcolor= white>
+    <tr>
+      <td align=center valign=top style="padding-left: 10px; padding-right: 10px;">
+        <h3>Introduction</h3>
+        <blockquote>
+        <p align=justify>
+          Stepper motor as the name depicts takes steps to complete a full 360 degree 
+          circular rotation. We can rotate stepper in clock and anti clock wise 
+          direction. Stepper motor speed can also be varied. Stepper motors are widely 
+          used in industrial, medical, consumer electronics application. In simple 
+          words, anywhere precision rotation or positioning of an object is needed. 
+          This article  is about interfacing stepper motor to 8051 microcontroller.
+        </p>
+      </blockquote>
+        <h3>Hardware Discussion (1/2): Stepper Motor</h3>
+
+        <div class="box"><img src="assets/images/stepper-motor.jpg" alt="Stepper Motor"></div>
+        <div id="capt_cont">Fig: An Unipolar Stepper Motor</div>
+      
+        <h3>Stepper Motor Features :</h3>
+        
+        <ul class="inside">
+            <li>small step angle.</li>
+            <li>high positioning accuracy.</li>
+            <li>high torque to inertia ratio.</li>
+            <li>stepping rate and accuracy.</li>
+            <li>Available in Unipolar and Bipolar configuration.</li>
+            <li>Used in Computing, Robotics, Camera, Printers,Process automation 
+                and pack-aging machinery, Positioning of valve pilot stages for 
+                fluid control systems.</li>
+           </ul>
+          <br>
+
+          <p align=justify>
+            Stepper motor is brushless DC motor, which can be rotated in small angles,
+            these angles are called steps. Generally stepper motor use 200 steps to 
+            complete 360degree rotation, means its rotate 1.8 degree per step. 
+            Stepper motor used in manydevices which needs precise rotational movement 
+            like robots, antennas, hard drivesetc. We can rotate stepper motor to any 
+            particular angle by giving it proper in-structions. Stepper motor consumes 
+            high current during step rotation with load.20.To handle the extra power 
+            needed for stepper motor we will use high current drivingICs like ULN2003, 
+            L293D etc.
+
+
+          </p>
+
+          <h3>How it works?</h3>
+          <p align=justify>
+            Stepper motor is a brush less motor which converts electrical pulses into 
+            mechanical rotation. As the name indicates it rotates in steps according 
+            to the inputpulses. A stepper motor usually have a number of field coils 
+            (phases) and a too the rotor. The step size of the motor is determined by 
+            the number of phases and the number of teeth on the rotor. Step size is the 
+            angular displacement of the rotor inone step. <br><br>
+            
+            If a stepper motor has 4 phases and 50 teeth, it takes 50×4=200 steps tomake 
+            one complete rotation. So step angle will be 360/200=1.8°.The stepper motor 
+            we are using has 4 poles and a 1/64 reduction gear mechanism for increasing 
+            torque. The step angle of the motor is 5.64°. But when considering the 
+            reduction gear, the step angle of the output shaft is 5.64/64°.  
+            The internal schematic of the stepper motor is given below.
+          </p>
+
+          <div class="box">
+           <img src="assets/images/stepper-motor-windings.png" alt="winding">
+          </div>
+          <div id="capt_cont">
+            Fig: Unipolar Stepper Motor Ciol Windings
+          </div>
+
+
+          <p align=justify>
+            The stepper motor is rotated by switching individual phases ON for a given 
+            timeone by one. The sequence is given in the graph below.
+          </p>
+
+          <div class="box">
+            <img src="assets/images/stepper-motor-timing-diagram.png" alt="Timingdiagram">
+          </div>
+          <div id="capt_cont">
+            Fig: Stepper Motor Timing Diagram
+          </div>
+
+          
+
+          <h3>Circuit Diagram :</h3>
+          
+          <div class="box_ckt_diag">
+            <img src="assets/images/STEPPER_8051_Ckt.png" alt="ckt_diagram" width="600" height="350">
+          </div>
+
+          <div id="capt_cont">
+            Fig: Stepper Motor with 8051
+          </div>
+
+
+          <h3>Circuit Discussion :</h3>
+          <p align=justify>
+            The circuit diagram for interfacing stepper motor to 8051 is shown above. 
+            P1.0,P1.1, P1.2 and P1.3 pins are used for controlling the phases A1, A2, A3 and A4 
+            ofthe stepper motor respectively. ULN2003 is used for driving the individual 
+            phasesof the stepper motor. ULN2003 is a darlington transistor array used for 
+            driving highcurrent loads such as relays and motors. ULN2003 has 8 individual 
+            channels eachwith 1A capacity. The channels can be paralleled to increase the 
+            current capacity.Each channels are fitted with individual freewheeling diodes. 
+            The ULN2003 is op-erated in current sinking mode. Each channel is activated by 
+            giving a logic LOWat the corresponding input. For example if we make pin 1 of 
+            ULN2003 LOW, phaseA1 of the stepper motor gets switched ON.
+          </p>
+
+          <h3>Assembly Program : stepper_8051.asm</h3>
+          <div class="prog_cont">
+            <embed type="text/html" src="codes/STEPPER_8051.asm"  width="500" height="500">
+          </div>
+  
+          
+
+          <h3>Code Discussion:</h3>
+          <p align=justify>
+            The program first clears P1.0 for activating phase 1 (A1) of the stepper motor. 
+            This condition is maintained for 65mS and then P1.0 is set for deactivating phase 1 
+            of the motor. Then the same process is repeated for the port pins P1.1 to P1.3 and 
+            the entire cycle is repeated over and over to make the motor rotate in the clockwise direction.
+
+            Timer 0 of the microcontroller is configured in Mode1 for producing the 65mS delay. 
+            65mS is the width of each control pulse.
+
+
+          </p>
+
+    </div>
+
+      </td>
+      <td>
+        <div class="vdo_lst_cont">
+          <h3>Lesson Video</h3>
+          <iframe width="186" height="130" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+      </div>
+
+        <div id="sidebar1"></div>
+
+      </td>
+    </tr>
+  </table>
+
+  <table width=1000 height=50 align= center border="1">
+	  <tr>
+			<td>Prev topic: LED Matrix Interfacing with 8051</td>
+			<td>Next topic: Analog Reading with 8051</td>
+		</tr>
+  </table>
+
+	<div id="footer_common">
+    <div class="prj_footer_cell">
+        <ul>
+          <li id="active"><a href="http://www.melab-bd.com/home.html"><strong>Circuit Today</strong></a></li>
+          <li><a href="http://www.melab-bd.com/about.html"><strong>Radio Electronics</strong></a></li>
+          <li><a href="http://www.melab-bd.com/product.html"><strong>MikroE</strong></a></li>
+          <li><a href="http://www.melab-bd.com/project.html"><strong>8051 Projects</strong></a></li>
+          <li><a href="http://www.melab-bd.com/trainings.html"><strong>101 Components</strong></a></li>
+         </ul>
+    </div>
+  </div>
+    
+
+</body>
+
+
+</html>
