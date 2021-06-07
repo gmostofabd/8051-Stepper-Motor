@@ -69,9 +69,11 @@ blockquote {
 
 .root_cont{
   width: 960px;
-  height: 4400px;
+  height: auto;
+  overflow: hidden;
   margin: 20px auto;
   padding: 0 ;
+  position:relative;
   background-color: #fff;
 }
 
