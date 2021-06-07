@@ -114,6 +114,12 @@ blockquote {
   background-color: #fff;
 }
 
+.hw_section p{
+  text-align: justify;
+  font-size: 100%;
+  font-family: sans-serif;
+  margin-left: 20px;
+}
 
 
 
