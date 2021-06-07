@@ -107,6 +107,12 @@ blockquote {
   margin-right: 5px;
 }
 
+.hw_section{
+  width: 98%;
+  height: auto;
+  margin: 20px 15px;
+  background-color: #fff;
+}
 
 
 
