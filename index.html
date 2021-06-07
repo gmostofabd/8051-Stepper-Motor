@@ -30,24 +30,27 @@
 
 <body>
   <div id="header_common"><img src="https://github.com/gmostofabd/melab-store/blob/main/Images/8051_Tutorial_Banner.png?raw=true" alt="common_banner"></div>
-  <div id="topic_container"><h2>Exp. 09 : Stepper Motor Interfacing with 8051 Microcontroller</h2></div>
+  <div id="topic_container"><h2>Exp. 09 : Stepper Motor Interfacing</h2></div>
   
-  <table align = center width=960 bgcolor= white>
-    <tr>
-      <td align=center valign=top>
-        <h3>Introduction</h3>
-        <blockquote>
-        <p align=justify>
-          Stepper motor as the name depicts takes steps to complete a full 360 degree 
-          circular rotation. We can rotate stepper in clock and anti clock wise 
-          direction. Stepper motor speed can also be varied. Stepper motors are widely 
-          used in industrial, medical, consumer electronics application. In simple 
-          words, anywhere precision rotation or positioning of an object is needed. 
-          This article  is about interfacing stepper motor to 8051 microcontroller.
-        </p>
-      </blockquote>
-        <h3>Hardware Discussion (1/2): Stepper Motor</h3>
 
+  <div class="root_cont">
+    <div class="main_cont">
+
+      <div class="intro_section">
+        <h3>Introduction</h3>
+            <p align=justify>
+              Stepper motor as the name depicts takes steps to complete a full 360 degree 
+              circular rotation. We can rotate stepper in clock and anti clock wise 
+              direction. Stepper motor speed can also be varied. Stepper motors are widely 
+              used in industrial, medical, consumer electronics application. In simple 
+              words, anywhere precision rotation or positioning of an object is needed. 
+              This article  is about interfacing stepper motor to 8051 microcontroller.
+            </p>
+      </div>
+
+
+      <div class="intro_section">
+        <h3>Hardware Discussion: Stepper Motor</h3>
         <div class="box"><img src="assets/images/stepper-motor.jpg" alt="Stepper Motor"></div>
         <div id="capt_cont">Fig: An Unipolar Stepper Motor</div>
       
@@ -75,9 +78,8 @@
             high current during step rotation with load.20.To handle the extra power 
             needed for stepper motor we will use high current drivingICs like ULN2003, 
             L293D etc.
-
-
           </p>
+
 
           <h3>How it works?</h3>
           <p align=justify>
@@ -116,7 +118,8 @@
             Fig: Stepper Motor Timing Diagram
           </div>
 
-          
+        </div>
+        <div class="intro_section">  
 
           <h3>Circuit Diagram :</h3>
           
@@ -142,6 +145,9 @@
             giving a logic LOWat the corresponding input. For example if we make pin 1 of 
             ULN2003 LOW, phaseA1 of the stepper motor gets switched ON.
           </p>
+        </div>
+
+        <div class="intro_section">
 
           <h3>Assembly Program : stepper_8051.asm</h3>
           <div class="prog_cont">
@@ -159,24 +165,35 @@
 
             Timer 0 of the microcontroller is configured in Mode1 for producing the 65mS delay. 
             65mS is the width of each control pulse.
-
-
           </p>
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+    </div>
+    <div class="link_cont">
+
+      <div class="vdo_lst_cont">
+        <h3>Lesson Video</h3>
+        <iframe width="186" height="130" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+      </div>
+
+      <div id="sidebar1"></div> 
 
     </div>
 
-      </td>
-      <td>
-        <div class="vdo_lst_cont">
-          <h3>Lesson Video</h3>
-          <iframe width="186" height="130" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
-      </div>
+  </div>
 
-        <div id="sidebar1"></div>
 
-      </td>
-    </tr>
-  </table>
+
 
 
 
