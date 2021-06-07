@@ -80,7 +80,8 @@ li{margin: 10px 0;}
 .intro_section{
   width: 95%;
   height: auto;
-  margin: 20px 15px;
+  margin-top: 0;
+  margin-bottom: 30px;
   background-color: #fff;
 }
 
@@ -100,9 +101,10 @@ li{margin: 10px 0;}
 }
 
 .hw_section{
-  width: 98%;
+  width: 95%;
   height: auto;
-  margin: 20px 15px;
+  margin-top: 0;
+  margin-bottom: 30px;
   background-color: #fff;
 }
 
