@@ -99,6 +99,13 @@ blockquote {
   background-color: #fff;
 }
 
+.intro_section h3{
+  margin-left: 5px;
+  flex-wrap: 23px ;
+  text-align: left;
+  color: rgb(204, 4, 154);
+}
+
 .intro_section p{
   text-align: justify;
   font-size: 100%;
