@@ -67,6 +67,53 @@ blockquote {
   border: 1px solid #73AD21;
 }
 
+.root_cont{
+  width: 960px;
+  height: 4400px;
+  margin: 20px auto;
+  padding: 0 ;
+  background-color: #fff;
+}
+
+.main_cont{
+  width: 760px;
+  height: auto;
+  margin: 0;
+  float: left;
+  background-color: #fff;
+}
+
+.link_cont{
+  width: 200px;
+  height: auto;
+  float: left;
+  background-color: #fff;
+}
+
+.intro_section{
+  width: 95%;
+  height: auto;
+  margin: 10px 20px;
+  background-color: #fff;
+}
+
+.intro_section p{
+  text-align: justify;
+  font-size: 140%;
+  font-family: sans-serif;
+  margin-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
 #proj_lst_cont {
   width: 175px; height: auto;
   border-radius: 25px;
