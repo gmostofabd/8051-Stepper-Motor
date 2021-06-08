@@ -53,8 +53,7 @@ li{margin: 10px 0;}
 }
 
 .root_cont{
-  width: 960px;
-  height: auto;
+  width: 960px; height: auto;
   overflow: hidden;
   margin: 20px auto;
   padding: 0 ;
@@ -63,76 +62,43 @@ li{margin: 10px 0;}
 }
 
 .main_cont{
-  width: 760px;
-  height: auto;
+  width: 760px; height: auto;
   margin: 0;
   float: left;
   background-color: #fff;
 }
 
 .link_cont{
-  width: 200px;
-  height: auto;
+  width: 200px; height: auto;
   float: left;
   background-color: #fff;
 }
 
-.intro_section{
-  width: 96%;
-  height: auto;
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.section{
+  width: 96%; height: auto;
   margin-top: 0;
   margin-bottom: 30px;
   margin-left: 8px;
   background-color: #fff;
 }
 
-.intro_section h3{
+.section h3{
   margin-left: 5px;
   flex-wrap: 23px ;
   text-align: left;
   color: rgb(204, 4, 154);
 }
 
-.intro_section p{
+.section p{
   text-align: justify;
   font-size: 100%;
   font-family: sans-serif;
   margin-left: 15px;
   margin-right: 0;
 }
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
-.hw_section{
-  width: 95%;
-  height: auto;
-  margin-top: 0;
-  margin-bottom: 30px;
-  background-color: #fff;
-}
-
-.hw_section p{
-  text-align: justify;
-  font-size: 100%;
-  font-family: sans-serif;
-  margin-left: 10px;
-  margin-right: 0;
-
-}
-
-
-
-
-
-
-
-
-
-#proj_lst_cont {
-  width: 175px; height: auto;
-  border-radius: 25px;
-  border: 2px solid #5f0b46;
-  margin-top: 10px;
-  padding: 10px;
-}
 
 .vdo_lst_cont {
   width: 186px; height: auto;
@@ -140,6 +106,14 @@ li{margin: 10px 0;}
   background-color: #e4e1e1;
   padding: 5px;
   margin-bottom: 10px;
+}
+
+#exp_lst_cont {
+  width: 190px; height: auto;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 5px;
+  background-color: #e4e1e1;
 }
 
 .prog_cont{
@@ -164,18 +138,6 @@ li{margin: 10px 0;}
 .box_80 {width: 80%; height: auto;}
 .box_90 {width: 90%; height: auto;}
 
-.inside {
-  list-style-position: inside;
-  list-style-type: square;
-}
-
-#exp_lst_cont {
-  width: 190px; height: auto;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  padding: 5px;
-  background-color: #e4e1e1;
-}
 
 .ul_exp {
   list-style-type: none;
@@ -255,13 +217,9 @@ li{margin: 10px 0;}
   padding: 0;
 }
 
-.exercise_section ul{
-  list-style: none;
-}
+.exercise_section ul{list-style: none;}
 
-.exercise_section ul li{
-  color: #393b3a;
-}
+.exercise_section ul li{color: #393b3a;}
 
 .exercise_section ul li ul li{
   font-size: 20px;
